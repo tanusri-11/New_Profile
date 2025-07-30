@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline, AppBar, Toolbar, Typography, Button, Box, Avatar } from '@mui/material';
 import { Home as HomeIcon, Person } from '@mui/icons-material';
@@ -238,12 +238,14 @@ const AppLayout = () => {
 // Main App Component
 function App() {
   return (
+    
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
+      <HashRouter>
         <AppLayout />
-      </Router>
+      </HashRouter>
     </ThemeProvider>
+    
   );
 }
 
